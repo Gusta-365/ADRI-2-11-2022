@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Parallax Scrolling Website</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header>
+		<a href="#" class="logo">logo</a>
+
+	</header>
+	<section>
+		<img src="stars.png" id="estrellas">
+		<img src="meteoro.png" id="meteoro">
+		<img src="moon.png" id="luna">
+		<img src="mountains_behind.png" id="mountains_behind">
+		<h2 id="texto">Tsukamoto</h2>
+		<a href="#sec" id="boton">Explorar</a>
+		<img src="mountains_front.png" id="mountains_front">
+	</section>
+	<div class="sec" id="sec">
+		<h2>adri</h2>
+		<p>Holaa como estas espero que estés bien,se que no es lo mismo pero te dare la carta ya precencial pero te
+			mando esta asi por escrito solo queria decirte que te pareces mucho a las estrellas 🌟 de la noche con su
+			hermoso resplandor y como
+			las rosas con su delicioso aroma.
+
+			Solo quería decirte que me alegras mucho mis días cada mañana, cada tarde y cada noche 🌃, se que nos
+			conocemos hacé poco pero me haces muy feliz, con tu compañía, me gusta mucho hablar contigo se que no soy de
+			muchas palabras pero me gusta mucho hablar contigo escuchar tu hermosa voz, ver ese pelo ondulado que es
+			precioso y ver tus ojos bellos me gustan demasiado, don la ventana al éxito jsjs y pues Alfin espero verte
+			pronto jsjs, mientras tanto te seguiré haciendo cartas virtuales y ya nos vamos a graduar jsjss.
+
+			Bueno me despido, Adri diciendote esto <br><br> El sol es la estrella más brillante y grande del universo
+			pero no sé compara con tu sonrisa, el mar tiene muchas perlas pero no sé comparan con tu mirada, ya que tus
+			ojos son las perlas más hermosas de este mundo y los atardeceres son hermosos pero más hermoso es ver tu
+			carita estaré loco pero por una razón... <br><br> Esta noche la luna parece querer esconderse tras las nubes, discretamente, sin dejarse ver mucho, porque ha visto que aquí abajo hay una estrella que brilla con más fuerza que ella… ¡Esa estrella eres tú!
+		</p>
+	</div>
+
+	<script>
+		let estrellas = document.getElementById('estrellas');
+		let luna = document.getElementById('luna');
+		let mountains_behind = document.getElementById('mountains_behind');
+		let texto = document.getElementById('texto');
+		let boton = document.getElementById('boton');
+		let meteoro = document.getElementById('meteoro');
+		let mountains_front = document.getElementById('mountains_front');
+		let header = document.querySelector('header');
+		window.addEventListener('scroll', function () {
+			let value = window.scrollY;
+			estrellas.style.left = value * 0.25 + 'px';
+			luna.style.top = value * 1.05 + 'px';
+			mountains_behind.style.top = value * 0.5 + 'px';
+			mountains_front.style.top = value * 0 + 'px';
+			texto.style.marginRight = value * 4 + 'px';
+			texto.style.marginTop = value * 1.5 + 'px';
+			meteoro.style.marginLeft = value * 4 + 'px';
+			meteoro.style.marginTop = value * 1.5 + 'px';
+			boton.style.marginTop = value * 1.5 + 'px';
+			header.style.top = value * 0.5 + 'px';
+		})
+	</script>
+</body>
+
+</html>
